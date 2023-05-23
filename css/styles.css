@@ -4,8 +4,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color: var(--body-bg-color);
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 h1, 
@@ -76,6 +74,9 @@ img {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .header-flex {
@@ -150,8 +151,12 @@ font-style: normal;
 /**-------------HERO-------------**/
 
 .hero {
+    max-width: 1440px;
+    margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-bg.jpg");
     background-size: cover, cover;
+    background-repeat:  no-repeat, no-repeat;
+    background-position: center, center;
     color: #FFFFFF;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -195,6 +200,8 @@ font-style: normal;
 /**-------------FEATURES-------------**/
 
 .features {
+    max-width: 1440px;
+    margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -220,12 +227,6 @@ flex-basis: calc((100% - 72px) / 4);
     border-radius: 4px;
     margin-bottom: 8px;
 }
-
-.features-icon {
-    width: 64px;
-    height: 64px;
-}
-
 
 /**-------------TEXT ELEMENTS-------------**/
 
@@ -258,6 +259,8 @@ flex-basis: calc((100% - 72px) / 4);
 /**-------------OUR PRODUCTS-------------**/
 
 .our-products {
+    max-width: 1440px;
+    margin: 0 auto;
 padding-bottom: 120px;
 }
 
@@ -268,6 +271,8 @@ padding-bottom: 120px;
 /**-------------OUR TEAM-------------**/
 
 .team {
+    max-width: 1440px;
+    margin: 0 auto;
     background-color:var(--bg-filtre-button);
     padding-top: 120px;
     padding-bottom: 120px;
@@ -281,7 +286,7 @@ padding-bottom: 120px;
 }
 
 .personal-info {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .teammate-name {
@@ -296,12 +301,18 @@ padding-bottom: 120px;
 .social-link-list {
     display: flex;
     gap: 24px;
+    justify-content: center;
+}
+
+.social-link-item {
+    width: 40px;
+    height: 40px;
 }
 
 .social-link {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     background-color: #4D5AE5;
@@ -309,13 +320,11 @@ padding-bottom: 120px;
 }
 
 .personal-social-link:hover,
-.presonal-social-link:focus {
+.personal-social-link:focus {
     background-color: #404BBF;
 }
 
 .social-link-icon {
-    width: 16px;
-    height: 16px;
     fill: var(--bg-filtre-button);
 }
 
@@ -324,6 +333,8 @@ padding-bottom: 120px;
 .customers {
     padding-top: 120px;
     padding-bottom: 120px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .customers-headline {
@@ -335,36 +346,53 @@ padding-bottom: 120px;
     gap: 24px;
 }
 
-.customer-icon-box {
+.customer-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+
+.customer-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
-    height: 88px;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--customer-color);
     border-radius: 4px;
+    color: var(--customer-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    border-color: var(--linkaction-color);
+    color: var(--linkaction-color);
 }
 
 .customer-icon {
-    width: 104px;
-    height: 56px;
     fill: var(--customer-color);
 }
 
 
 /**-------------FOOTER-------------**/
 
-.footer-container {
-display: flex;
-gap: 120px;
-}
-
 .footer {
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: var(--bg-color);
     color: #FFFFFF;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+.footer-container {
+display: flex;
+align-items: baseline;
+}
+
+.footer-logo-container {
+    margin-right: 120px;
+}
+
 .footer-logo {
     display: inline-block;
     margin-bottom: 16px;
@@ -396,10 +424,6 @@ gap: 120px;
 background-color: #31D0AA;
 }
 
-.footer-social-linc-icon {
-    width: 24px;
-    height: 24px;
-}
 
 
 /*!-------------PORTFOLIO-------------**/
@@ -454,9 +478,12 @@ background-color: #31D0AA;
 .products-item {
     width: calc((100% - 48px) / 3);
 }
+.product-link {
+    display: block;
+}
 
-.products-item:hover,
-.products-item:focus {
+.product-link:hover,
+.product-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
