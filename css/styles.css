@@ -369,7 +369,7 @@ padding-bottom: 120px;
 }
 
 .customer-icon {
-    fill: var(--customer-color);
+    fill: currentColor;
 }
 
 
